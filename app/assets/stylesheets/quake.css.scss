@@ -1,0 +1,43 @@
+.quake {
+  width:     100%;
+  position:  absolute;
+  top:       0;
+  left:      0;
+  bottom:    100%;
+  z-index:   10000;
+
+  .results {
+    padding-left:   5em;
+    padding-right:  5em;
+    color:          white;
+    overflow-y:       scroll;
+    background:     black;
+    height:         100%;
+    opacity:        0.9;
+    filter:         alpha(opacity=90);
+
+    div{
+      padding-top:    4.5em;
+      border-bottom:  solid 2px #5097C1
+    }
+
+    li{
+      display: inline;
+      list-style-type: none;
+      padding-right: 1em;
+    }
+
+    a{
+      color:white;
+      font-size: 1.4em;
+    }
+  }
+
+  input.q {
+    display:    none;
+    border:     none;
+    width:      100%;
+    font-size:  2em;
+    padding:    .75em;
+  }
+}

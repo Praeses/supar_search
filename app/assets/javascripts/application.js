@@ -13,3 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+key('`, /, esc' , function(){term.toggle();});
+
+$(document).ready(function(){
+  if(window.location.pathname !== '/users/sign_in'){
+    term = new Quake();
+    //spectrum();
+  }
+});

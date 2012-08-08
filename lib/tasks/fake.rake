@@ -4,6 +4,7 @@ namespace :fake do
     puts "Starting to fake some data"
     Company.destroy_all
     Address.destroy_all
+    Inspection.destroy_all
 
     10.times do |i|
       Company.create({
@@ -30,5 +31,18 @@ namespace :fake do
 
     puts ""
     puts "#{Address.count} Addresses"
+
+
+    10.times do |i|
+      ins = Inspection.create({
+        name:    Faker::Company.name,
+        number:  i,
+        company_id: Company.all.sample.id
+      })
+      putc '.'
+    end
+
+    puts ""
+    puts "#{Inspection.count} Inspections"
   end
 end
